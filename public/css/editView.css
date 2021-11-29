@@ -1,0 +1,12 @@
+body {
+  text-align: center;
+}
+
+.btn-general {
+  width: 42%;
+  box-sizing: content-box;
+  border: var(--button-general-border);
+  border-radius: var(--button-general-border-radius);
+  background: rgba(128, 20, 123, 0.54);
+  box-shadow: var(--button-general-box-shadow);
+}
