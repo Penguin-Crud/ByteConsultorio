@@ -20,9 +20,14 @@ class AppointmentController {
         
     }
     public function edit(){
-        require_once __DIR__ . "/../views/pages/editView.php";
-        
-          }
+      /*$idToEdit = '';*/
+      
+      /*if($_POST){
+        $idToEdit = $_POST['id'];
+        }*/
+      require_once __DIR__ . "/../views/pages/editView.php";
+      
+    }
       
     /*public function update(){
         require_once __DIR__ . "/../views/pages/checkListView.php";
@@ -39,6 +44,17 @@ class AppointmentController {
       $dataConsulta = $SQLQueryRepository->getDataById($id);
       require_once __DIR__ . '/../views/pages/popUp.php';
     }
+
+    public function editInfo ($id){
+      $SQLQueryRepository = new SQLQueryRepository();
+      $idConsulta = $SQLQueryRepository->getDataById($id);
+      require_once __DIR__ . '/../views/pages/editView.php';
+    }
+    // public function update($id) {
+    //   $SQLQueryRepository = new SQLQueryRepository();
+    //   $idConsulta = $SQLQueryRepository->getDataById($id);
+    //   require_once __DIR__ . "/../views/pages/editView.php";
+    // }
     
 
     private function redirect(string $url)

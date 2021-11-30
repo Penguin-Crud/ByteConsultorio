@@ -9,6 +9,7 @@ class AppointmentModel {
     public $email;
     public $title;
     public $message;
+    public $created_at;
 
     private $db;
     
@@ -20,6 +21,8 @@ class AppointmentModel {
             $this->email = $data['email'];
             $this->title = $data['title_query'];
             $this->message = $data['problem_query'];
+            $this->created_at = $data['created_at'];
+            
         }
         
         $this->db = new SQLQueryRepository();

@@ -21,7 +21,7 @@ require_once __DIR__ . '/../layouts/default.php';?>
                 <a href='?action=popUp&id={$itemConsulta->id}'>+info</a>
                 <a href='?action=delete&id={$itemConsulta->id}'>delete</a>
                 <p><b>{$itemConsulta->title}</b></p>
-                <p><b>15:30</b></p>
+                <p><b>{$itemConsulta->created_at}</b></p>
                 <p><b>{$itemConsulta->name}</b></p>
             </div>
             ";

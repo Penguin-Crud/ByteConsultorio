@@ -17,10 +17,10 @@ echo "
                     </main>
             
                     <footer class='d-flex justify-content-center mt-3 mb-4 ml-4 position-relative'>
-                        <button type='button' class='btn p-0 position-absolute start-0'>
+                        <button type='button' onclick='location=`/`' class='btn p-0 position-absolute start-0'>
                             <img src='css/icons/btn-back.png' class='img-fluid' style='width:70%;' alt='btn-back'>
                         </button>
-                        <button type='butto' class='btn btn-primary btn-lg'>Actualizar</button>
+                        <button type='button'  class='btn btn-primary btn-lg'><a href='?action=edit&id={$dataConsulta['id']}'>Actualizar</a></button>
                     </footer>
                 </div>
             </div>

@@ -6,15 +6,19 @@ use App\Core\SQLConnection;
 $uri = $_SERVER["REQUEST_URI"];
 
 /*$db = (new SQLConnection())->mysql;
-
 $query = $db->query("select * FROM querys");
-
 $result = $query->fetchAll();*/
 
 $controller = new AppointmentController();
 
 if($_POST){
+    /*if(isset($_POST['edit'])){
+        alert($_POST['edit']);
+    }*/
+    
     $controller->store($_POST);
+    
+    
 }
 
 if ($uri == '/checklist' || $uri == '/'){
@@ -26,7 +30,8 @@ if ($uri == '/create'){
 }
 
 if ($uri == '/edit'){
-    $controller -> edit();
+   // $controller -> edit();
+
 }
 
 
@@ -41,5 +46,8 @@ if($_GET){
         $controller->mostrarPopUp($_GET['id']);
     }
     
+    if ($_GET["action"]=="edit"){
+        $controller->editInfo($_GET['id']);
+    }
 }
 ?>
