@@ -34,6 +34,11 @@ class AppointmentController {
       $this->redirect('/');
     }
 
+    public function mostrarPopUp ($request){
+      require_once __DIR__ . '/../views/pages/popUp.php';
+    }
+    
+
     private function redirect(string $url)
     {
       header("Location:{$url}");
@@ -42,7 +47,10 @@ class AppointmentController {
     public function appointmentDelete ($request){
       $appointmentToDelete = new SQLQueryRepository();
       $appointmentToDelete -> delete ($request['id']);
+      $this->redirect('/');
     }
+
+
 }
 
 

@@ -29,15 +29,17 @@ if ($uri == '/edit'){
     $controller -> edit();
 }
 
-/*if (){
-    $controller -> update();
-}*/
+
 
 if($_GET){
     if ($_GET["action"]=="delete"){
         $controller->appointmentDelete($_GET);
         $controller->index();
     }
-}
 
+    if ($_GET["action"]=="popUp"){
+        $controller->mostrarPopUp($_GET);
+    }
+    
+}
 ?>
