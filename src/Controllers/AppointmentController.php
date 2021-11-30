@@ -34,7 +34,9 @@ class AppointmentController {
       $this->redirect('/');
     }
 
-    public function mostrarPopUp ($request){
+    public function mostrarPopUp ($id){
+      $SQLQueryRepository = new SQLQueryRepository();
+      $dataConsulta = $SQLQueryRepository->getDataById($id);
       require_once __DIR__ . '/../views/pages/popUp.php';
     }
     

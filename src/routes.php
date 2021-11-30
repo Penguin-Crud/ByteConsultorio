@@ -38,7 +38,7 @@ if($_GET){
     }
 
     if ($_GET["action"]=="popUp"){
-        $controller->mostrarPopUp($_GET);
+        $controller->mostrarPopUp($_GET['id']);
     }
     
 }

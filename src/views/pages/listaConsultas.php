@@ -33,6 +33,7 @@ require_once __DIR__ . '/../layouts/default.php';?>
                     <img src="/css/icons/btn-add.png" alt="btn Add" class='w-50 pt-5 pb-5' styles=''>
                 </button>
         </div>
+
     </div>
 </main>
 

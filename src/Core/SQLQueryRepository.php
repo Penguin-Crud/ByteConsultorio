@@ -17,18 +17,26 @@ class SQLQueryRepository implements IQueryRepository {
             return $result;
         }
 
+        function getDataById($id) {
+            $query = $this->connection->query("SELECT * FROM `{$this->table}` WHERE `{$this->table}` . `id` = {$id}");
+            $result = $query->fetchAll()[0];
+            return $result;
+        }
+
         function save($name, $email, $title, $message)
         {
-            //$this->connection->query("INSERT INTO `{$this->table}` (`name`,`email`,`title_query`,`problem_query`) VALUES ('{$name}','{$email}','{$title}','{$message}')");
             $this->connection->query("INSERT INTO `{$this->table}` (`name`,`email`,`title_query`,`problem_query`) VALUES ('{$name}','{$email}','{$title}','{$message}')");
 
         }
         function edit($id, $name, $title, $message)
         {
-            $this->connection->query("UPDATE `{$this->table}` SET 
-            `name`='{$name}',`title_query`='{$title}',`problem_query`='{$message}' WHERE `{$this->table}` . `id` = {$id}");
+            $this->connection->query(
+                "UPDATE `{$this->table}` 
+                 SET `name`='{$name}',`title_query`='{$title}',`problem_query`='{$message}' 
+                 WHERE `{$this->table}` . `id` = {$id}"
+            );
         }
         function delete($id){
-           $this->connection->query("DELETE FROM `{$this->table}` WHERE `{$this->table}` . `id` = {$id}");
+            $this->connection->query("DELETE FROM `{$this->table}` WHERE `{$this->table}` . `id` = {$id}");
         }
 }
