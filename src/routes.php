@@ -17,7 +17,7 @@ if($_POST){
     $controller->store($_POST);
 }
 
-if ($uri == '/checklist' || $uri=='/'){
+if ($uri == '/checklist' || $uri == '/'){
     $controller -> index();
 }
 
@@ -29,9 +29,9 @@ if ($uri == '/edit'){
     $controller -> edit();
 }
 
-if ($uri == '/checklist'){
+/*if (){
     $controller -> update();
-}
+}*/
 
 if($_GET){
     if ($_GET["action"]=="delete"){

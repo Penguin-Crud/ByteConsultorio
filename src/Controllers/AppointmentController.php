@@ -24,9 +24,9 @@ class AppointmentController {
         
           }
       
-    public function update(){
+    /*public function update(){
         require_once __DIR__ . "/../views/pages/checkListView.php";
-    }
+    }*/
 
     public function store($request){
       $appointmentToSave = new AppointmentModel($request);
@@ -40,8 +40,8 @@ class AppointmentController {
     }
 
     public function appointmentDelete ($request){
-      $appointmentDelete = new SQLQueryRepository();
-      $appointmentDelete -> delete ($request['id']);
+      $appointmentToDelete = new SQLQueryRepository();
+      $appointmentToDelete -> delete ($request['id']);
     }
 }
 

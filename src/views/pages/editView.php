@@ -2,16 +2,16 @@
 
 
     <h2>Edit Your Query</h2>
-    <form method="POST" action="edit.php" class="row">
+    <form method="POST" action="checklist" class="row">
         <div class="col-lg-3 col-sm-2"></div>
         <div class="col-lg-6 col-sm-8">
             <fieldset disabled>
                 <div class="mb-3">
                     <input type="text" class="form-control" name="name" placeholder="Name/Surname">
                 </div>
-                <div class="mb-3">
+                <!-- <div class="mb-3">
                     <input type="email" class="form-control" name="email" placeholder="name@example.com">
-                </div>
+                </div> -->
                 <div class="mb-3">
                     <input type="title" class="form-control" name="querytitle" aria-describedby="emailHelpId"
                         placeholder="title">

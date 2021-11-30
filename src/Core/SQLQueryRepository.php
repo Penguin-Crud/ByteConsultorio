@@ -23,9 +23,10 @@ class SQLQueryRepository implements IQueryRepository {
             $this->connection->query("INSERT INTO `{$this->table}` (`name`,`email`,`title_query`,`problem_query`) VALUES ('{$name}','{$email}','{$title}','{$message}')");
 
         }
-        function update($name, $email, $title, $message)
+        function edit($id, $name, $title, $message)
         {
-            $this->connection->query("UPDATE `querys` SET `id`='[value-1]',`name`='[value-2]',`email`='[value-3]',`title_query`='[value-4]',`problem_query`='[value-5]' WHERE 1");
+            $this->connection->query("UPDATE `{$this->table}` SET 
+            `name`='{$name}',`title_query`='{$title}',`problem_query`='{$message}' WHERE `{$this->table}` . `id` = {$id}");
         }
         function delete($id){
            $this->connection->query("DELETE FROM `{$this->table}` WHERE `{$this->table}` . `id` = {$id}");
