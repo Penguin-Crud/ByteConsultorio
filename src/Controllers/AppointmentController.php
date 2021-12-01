@@ -8,8 +8,6 @@ use App\Models\AppointmentModel;
 class AppointmentController {
 
     public function index(){
-
-      // require_once __DIR__ . "/../views/pages/checklistView.php";
       $appointment = (new AppointmentModel())->all();
       require_once __DIR__ . "/../views/pages/listaConsultas.php";
       
@@ -65,6 +63,11 @@ class AppointmentController {
     public function appointmentDelete ($request){
       $appointmentToDelete = new SQLQueryRepository();
       $appointmentToDelete -> delete ($request['id']);
+      $this->redirect('/');
+    }
+
+    public function update($id, $message) {
+      (new AppointmentModel()) -> update($id, $message);
       $this->redirect('/');
     }
 

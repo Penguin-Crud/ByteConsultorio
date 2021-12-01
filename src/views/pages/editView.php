@@ -2,7 +2,7 @@
 <?php 
     echo "
     <h2>Edit Your Query</h2>
-    <form method='POST' action='checklist' class='row'>
+    <form method='POST' action='edit' class='row'>
         <div class='col-lg-3 col-sm-2'></div>
         <div class='col-lg-6 col-sm-8'>
 
@@ -21,7 +21,7 @@
             </fieldset>
 
             <div class='mb-3'>
-                <textarea class='form-control' required name='message' rows='3' placeholder='Message...' >
+                <textarea class='form-control' required name='message' rows='3' >
                     {$idConsulta['problem_query']}
                 </textarea>
             </div>

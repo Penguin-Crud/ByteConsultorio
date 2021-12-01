@@ -22,12 +22,11 @@ class AppointmentModel {
             $this->title = $data['title_query'];
             $this->message = $data['problem_query'];
             $this->created_at = $data['created_at'];
-            
         }
-        
         $this->db = new SQLQueryRepository();
-
      }
+
+
     public function all(){
         $appointmentList = [];
         foreach($this->db->getAll() as $appointment) {
@@ -39,6 +38,11 @@ class AppointmentModel {
     public function save()
     {
        $this->db->save( $this->name, $this->email, $this->title, $this->message );
+    }
+
+    public function update($id, $message) 
+    {
+        $this->db->update($id, $message);
     }
 }
 

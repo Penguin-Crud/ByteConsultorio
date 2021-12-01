@@ -19,7 +19,7 @@ style="background-color:#6B93C6;height:77vh;">
         </div>
 
         <div class="mb-3 w-75">
-            <textarea class="form-control" name="problem_query" rows="3" required placeholder="Message..."></textarea>
+            <textarea class="form-control" required name="problem_query" rows="3"  placeholder="Message..."></textarea>
         </div>
 
         <button type="submit" class="btn btn-primary">Submit</button>
@@ -27,4 +27,4 @@ style="background-color:#6B93C6;height:77vh;">
     </div>
 </form>
 
-<?php require_once __DIR__ . "/../layout/defaultFooter.php" ?>
+<?php require_once __DIR__ . "/../layouts/defaultFooter.php" ?>
