@@ -14,11 +14,8 @@ $controller = new AppointmentController();
 if($_POST){
     /*if(isset($_POST['edit'])){
         alert($_POST['edit']);
-    }*/
-    
-    $controller->store($_POST);
-    
-    
+    }*/   
+    $controller->store($_POST); 
 }
 
 if ($uri == '/checklist' || $uri == '/'){
@@ -31,7 +28,6 @@ if ($uri == '/create'){
 
 if ($uri == '/edit'){
    // $controller -> edit();
-
 }
 
 

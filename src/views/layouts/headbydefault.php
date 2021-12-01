@@ -11,6 +11,6 @@
     <title>The Software Office</title>
 </head>
 
-<body>
+<body class="mt-0">
 
-<?php require_once __DIR__ . "/../components/header.php";?>
+<?php require_once __DIR__ . "/../components/headerExport.php";?>
