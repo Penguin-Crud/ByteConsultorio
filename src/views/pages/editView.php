@@ -15,10 +15,9 @@
                     <input type='title' class='form-control' name='querytitle' aria-describedby='emailHelpId'
                     placeholder='title' value='{$idConsulta['title_query']}'>
                 </div>
-                
-                <input type='hidden' name='edit' value='{$idConsulta['id']}'>
-
             </fieldset>
+
+            <input type='text' name='id' value='{$idConsulta['id']}'>
 
             <div class='mb-3'>
                 <textarea class='form-control' required name='message' rows='3' >

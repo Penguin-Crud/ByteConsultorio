@@ -12,7 +12,6 @@ class SQLQueryRepository implements IQueryRepository {
         }
 
 
-
         function getAll(){
             $query = $this->connection->query("select * FROM {$this->table}");
             $result = $query->fetchAll();

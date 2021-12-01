@@ -25,7 +25,9 @@ if ($uri == '/create'){
 }
 
 if ($uri == '/edit'){
-   // $controller -> edit();
+    if($_POST){ 
+        $controller->update($_POST['id'], $_POST['message']); 
+    }
 }
 
 
