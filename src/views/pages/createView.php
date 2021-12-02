@@ -2,7 +2,7 @@
 
 <div class="w-100" style="display:flex; justify-content:center; align-items:center;"> 
     <form  method="POST" action="checklist" 
-    class='w-75 pt-5 pb-5 "d-flex justify-content-center align-items-center' 
+    class='w-75 pt-5 pb-5 d-flex justify-content-center align-items-center' 
     style="background-color:#6B93C6; height:77vh; ">
         <div class="d-flex justify-content-center align-items-center flex-column">
 
