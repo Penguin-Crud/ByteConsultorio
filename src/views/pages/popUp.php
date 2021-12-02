@@ -22,7 +22,7 @@ echo "
                             <img src='/assets/btnback.png' class='img-fluid' style='width:70%;' alt='btn-back'>
                         </button>
                         <button type='button' class='btn btn-primary btn-lg'>
-                            <a style='color:white; text-decoration:none' href='?action=edit&id={$dataConsulta['id']}'>Actualizar</a>
+                            <a style='color:white; text-decoration:none' href='?action=edit&id={$dataConsulta['id']}'>Update</a>
                         </button>
                     </footer>
                 </div>
