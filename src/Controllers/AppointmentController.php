@@ -44,10 +44,10 @@ class AppointmentController
 
     
 
-    public function appointmentDelete ($request)
+    public function appointmentDelete ($id)
     {
-      $appointmentToDelete = new SQLQueryRepository();
-      $appointmentToDelete -> delete ($request['id']);
+      $data = (new AppointmentModel())->getDataById($id);
+      $data->delete();
       $this->redirect('/');
     }
 

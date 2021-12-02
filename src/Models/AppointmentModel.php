@@ -42,7 +42,9 @@ class AppointmentModel
         } return $appointmentList;
     }
    
-
+    public function delete(){
+        $this->db->delete($this->id);
+    }
 
     public function save()
     {

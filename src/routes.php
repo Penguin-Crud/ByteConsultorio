@@ -34,7 +34,7 @@ if($_GET)
 {
     if ($_GET["action"]=="delete")
     {
-        $controller->appointmentDelete($_GET);
+        $controller->appointmentDelete($_GET['id']);
         $controller->index();
     }
 
