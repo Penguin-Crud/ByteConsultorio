@@ -15,4 +15,4 @@
 </head>
 <body>
     
-    <?php require_once __DIR__ . '/../components/headerExport.php'?>
+    <?php require_once __DIR__ . '/../components/headerExportDefault.php'?>
