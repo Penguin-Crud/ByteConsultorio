@@ -59,7 +59,9 @@ class AppointmentController
 
     public function update($id, $message) 
     {
-      (new AppointmentModel()) -> update($id, $message);
+      $data = (new AppointmentModel()) -> getDataById($id);
+      $data->setMessage($message);
+      $data->update();
       $this->redirect('/');
     }
 }

@@ -53,8 +53,12 @@ class AppointmentModel
         return new self($this->db->getDataById($id));
     }
 
-    public function update($id, $message) 
+    public function setMessage($message){
+        $this->message = $message;
+    }
+
+    public function update() 
     {
-        $this->db->update($id, $message);
+        $this->db->update($this->id, $this->message);
     }
 }
