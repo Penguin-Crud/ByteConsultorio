@@ -38,8 +38,7 @@ class AppointmentController
 
     public function mostrarPopUp ($id)
     {
-      $SQLQueryRepository = new SQLQueryRepository();
-      $dataConsulta = $SQLQueryRepository->getDataById($id);
+      $dataConsulta = (new AppointmentModel())->getDataById($id);
       require_once __DIR__ . '/../views/pages/popUp.php';
     }
 
