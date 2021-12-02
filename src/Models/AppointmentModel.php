@@ -59,6 +59,6 @@ class AppointmentModel
 
     public function update() 
     {
-        $this->db->update($this->id, $this->message);
+        $this->db->update($this->id, $this->name, $this->email,$this->title, $this->message);
     }
 }

@@ -48,12 +48,12 @@ class SQLQueryRepository implements IQueryRepository
         );
     }
 
-    function update($id, $message)
+    function update($id, $name, $email, $title, $message)
     {
         $this->connection->query(
             "UPDATE `{$this->table}` 
-             SET `problem_query`='{$message}' 
+             SET `name`='{$name}', `email`='{$email}', `title_query`='{$title}', `problem_query`='{$message}'
              WHERE `{$this->table}` . `id` = {$id}"
-        );
+        );//`email` = 'arian@gmail.com a ', `name` = 'Biplopa a', `title_query` = 'hola update af', `problem_query` = 'kokaloa a'
     } 
 }
