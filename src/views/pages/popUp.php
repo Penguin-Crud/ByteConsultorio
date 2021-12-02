@@ -2,10 +2,10 @@
 <?php
 echo "
     <div class='container d-flex justify-content-center mt-3' style='height:80%;'>
-        <div id='POPup' class=' d-flex justify-content-center align-items-center' >
-            <div style='display:flex; flex-direction:column; height:58vh; align-items:center; border-radius:15px;background-color:#3954A5; min-width: 170%'>
+        <main id='POPup' class=' d-flex justify-content-center align-items-center' >
+            <article style='display:flex; flex-direction:column; height:58vh; align-items:center; border-radius:15px;background-color:#3954A5; min-width: 170%'>
 
-                <div style='width: 90%;'>
+                <section style='width: 90%;'>
                     <header class='d-flex justify-content-between'> 
                         <p class='text-white display-6 ml-1 mt-2'>{$dataConsulta['title_query']}</p>
                         <p class='text-white mr-1 mt-2'>{$dataConsulta['created_at']}</p>
@@ -25,10 +25,10 @@ echo "
                             <a style='color:white; text-decoration:none' href='?action=edit&id={$dataConsulta['id']}'>Update</a>
                         </button>
                     </footer>
-                </div>
+                </section>
 
-            </div>
-        </div>
+            </article >
+        </main>
     </div>
 ";
 ?>
