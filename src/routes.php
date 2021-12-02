@@ -6,7 +6,7 @@ use App\Controllers\AppointmentController;
 $uri = $_SERVER["REQUEST_URI"];
 $controller = new AppointmentController();
 
-
+///////////////////
 if ($uri == '/checklist' || $uri == '/')
 {
     if($_POST)

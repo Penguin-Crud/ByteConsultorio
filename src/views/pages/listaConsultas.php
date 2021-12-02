@@ -1,11 +1,8 @@
-<?php 
-use App\Controllers\AppointmentController;
-require_once __DIR__ . '/../layouts/default.php';?>
+<?php require_once __DIR__ . '/../layouts/default.php';?>
 
 <main class='container'>
     <div class="row">
         <?php
-        // $appointment = (new AppointmentModel())->All();
         
         foreach ($appointment as $itemConsulta) {
             echo "
@@ -22,7 +19,7 @@ require_once __DIR__ . '/../layouts/default.php';?>
 
         <div class='col d-flex flex-column align-items-center justify-content-center h-25 p-2 text-white m-3' 
         style='background-color:rgba(113,144,195,100); border-radius:20px;width:30vw'>
-            <button class="" onclick="location='/create'">
+            <button style= "background-color:transparent;border:none" onclick="location='/create'">
                 <img src="/assets/btnadd.png" alt="btn Add" class='w-50 pt-5 pb-5'>
             </button>
         </div>
@@ -31,25 +28,3 @@ require_once __DIR__ . '/../layouts/default.php';?>
 </main>
 
 <?php require_once __DIR__ . '/../layouts/defaultFooter.php'?>
-
-
-
-
-
-
-
-
-<!--                        IF ( )     {}                 else{}     -->
-                <!--     pregunta ? (SI es cierto) : (NO sea cierto)                          -->
-
-<!--   if(pregunta) {
-            (SI es cierto)
-       } else { (NO es cierto)}
-}   -->
-
-
-
-
-
-
-

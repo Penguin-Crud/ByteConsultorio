@@ -1,7 +1,6 @@
 <?php
 namespace App\Models;   
 
-use App\Core\FakeQueryRepository;
 use App\Core\SQLQueryRepository;
 
 class AppointmentModel

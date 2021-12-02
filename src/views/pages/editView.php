@@ -17,7 +17,7 @@
                 </div>
             </fieldset>
 
-            <input type='text' name='id' value='{$idConsulta['id']}'>
+            <input type='hidden' name='id' value='{$idConsulta['id']}'>
 
             <div class='mb-3'>
                 <textarea class='form-control' required name='message' rows='3' >
