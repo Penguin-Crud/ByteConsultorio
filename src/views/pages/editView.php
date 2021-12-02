@@ -8,20 +8,20 @@
 
             <fieldset disabled>
                 <div class='mb-3'>
-                    <input type='text' class='form-control' name='name' placeholder='Name/Surname' value='{$idConsulta['name']}'>
+                    <input type='text' class='form-control' name='name' placeholder='Name/Surname' value='{$idConsulta->name}'>
                 </div>
                 
                 <div class='mb-3'>
                     <input type='title' class='form-control' name='querytitle' aria-describedby='emailHelpId'
-                    placeholder='title' value='{$idConsulta['title_query']}'>
+                    placeholder='title' value='{$idConsulta->title}'>
                 </div>
             </fieldset>
 
-            <input type='text' name='id' value='{$idConsulta['id']}'>
+            <input type='text' name='id' value='{$idConsulta->id}'>
 
             <div class='mb-3'>
                 <textarea class='form-control' required name='message' rows='3' >
-                    {$idConsulta['problem_query']}
+                    {$idConsulta->message}
                 </textarea>
             </div>
             

@@ -54,8 +54,7 @@ class AppointmentController
 
     public function editInfo ($id)
     {
-      $SQLQueryRepository = new SQLQueryRepository();
-      $idConsulta = $SQLQueryRepository->getDataById($id);
+      $idConsulta = (new AppointmentModel())->getDataById($id);
       require_once __DIR__ . '/../views/pages/editView.php';
     }
 

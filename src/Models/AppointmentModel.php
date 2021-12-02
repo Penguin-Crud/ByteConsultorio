@@ -48,6 +48,10 @@ class AppointmentModel
     {
        $this->db->save( $this->name, $this->email, $this->title, $this->message );
     }
+    
+    public function getDataById($id){
+        return new self($this->db->getDataById($id));
+    }
 
     public function update($id, $message) 
     {
