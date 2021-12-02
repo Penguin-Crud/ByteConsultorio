@@ -2,8 +2,8 @@
 <?php
 echo "
     <div class='container d-flex justify-content-center mt-3' style='height:80%;'>
-        <div id='POPup' class=' d-flex justify-content-center ' >
-            <div style='display:flex; flex-direction:column; margin-bottom: 17px; align-items:center; border-radius:15px;background-color:#3954A5; min-width: 170%'>
+        <div id='POPup' class=' d-flex justify-content-center align-items-center' >
+            <div style='display:flex; flex-direction:column; height:58vh; align-items:center; border-radius:15px;background-color:#3954A5; min-width: 170%'>
 
                 <div style='width: 90%;'>
                     <header class='d-flex justify-content-between'> 
