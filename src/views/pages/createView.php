@@ -6,7 +6,7 @@
     style="background-color:#6B93C6; height:77vh; border-radius: 20px;">
         
         <main class="d-flex justify-content-center align-items-center flex-column w-50">
-            <p class="fs-1 mb-5" style="color:white;">Consult Create</p>
+            <p class="fs-1 mb-2" style="color:white;">Consult Create</p>
 
             <section class="mb-3 w-100">
                 <label class='mb-1' style='display:flex; justify-content:start; font-size:1.5em; color:white;'>Name:</label>
@@ -26,7 +26,7 @@
 
             <section class="mb-3 w-100">
                 <label class='mb-1' style='display:flex; justify-content:start; font-size:1.5em; color:white;'>Consult:</label>
-                <textarea class="form-control" required name="problem_query" rows="3"  placeholder="Message..."></textarea>
+                <textarea class="form-control" required name="problem_query" rows="3" maxlength="255" placeholder="Message..."></textarea>
             </section>
             <section>
                 <button type='button' onclick='location=`/`' class='btn p-0'>

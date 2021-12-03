@@ -8,7 +8,7 @@
         style='background-color:#6B93C6; height:77vh; border-radius: 20px;'>
 
             <div id='formContainer' class='d-flex w-50 justify-content-center align-items-center flex-column'>
-                <p class='fs-1 mb-5' style='color:white;'>Consult Edit</p>
+                <p class='fs-1 mb-2' style='color:white;'>Consult Edit</p>
 
                 <fieldset class='w-75' disabled>
                     <section class='mb-3'>
@@ -27,7 +27,7 @@
 
                 <section class='mb-3 w-75'>
                     <label class='mb-1' style='display:flex; justify-content:start; font-size:1.5em; color:white;'>Consult:</label>
-                    <textarea class='form-control' required name='message' rows='3' >{$idConsulta['problem_query']}</textarea>
+                    <textarea class='form-control' required name='message' rows='3' maxlength='255' >{$idConsulta['problem_query']}</textarea>
                 </section>
                 
                 <section>
