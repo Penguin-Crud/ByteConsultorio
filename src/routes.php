@@ -9,43 +9,31 @@ $controller = new AppointmentController();
 ///////////////////
 if ($uri == '/checklist' || $uri == '/')
 {
-    if($_POST)
-    { 
+    if($_POST) 
         $controller->store($_POST); 
-    }$controller -> index();
+    
+    $controller -> index();
 }
 
 if ($uri == '/create')
-{
     $controller -> create();
-}
 
-if ($uri == '/edit')
-{
-    if($_POST)
-    { 
+if ($uri == '/edit' && $_POST)
         $controller->update($_POST['id'], $_POST['message']); 
-    }
-}
-
-
-
+    
 if($_GET)
-{
-    if ($_GET["action"]=="delete")
-    {
-        $controller->appointmentDelete($_GET);
-        $controller->index();
-    }
-
-    if ($_GET["action"]=="popUp")
-    {
-        $controller->mostrarPopUp($_GET['id']);
+    switch($_GET["action"]){
+        case "delete":
+            $controller->appointmentDelete($_GET['id']);
+            $controller->index();
+            break;
+        case "popUp":
+            $controller->mostrarPopUp($_GET['id']);
+            break;
+        case "edit":
+            $controller->editInfo($_GET['id']);
+            break;
     }
     
-    if ($_GET["action"]=="edit")
-    {
-        $controller->editInfo($_GET['id']);
-    }
-}
+
 ?>

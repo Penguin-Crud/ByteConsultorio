@@ -2,7 +2,7 @@
 namespace App\Models;   
 
 use App\Core\SQLQueryRepository;
-
+use App\Core\IQueryRepository;
 class AppointmentModel
 {
     public ?int $id= null;
@@ -12,7 +12,7 @@ class AppointmentModel
     public $message;
     public $created_at;
 
-    private $db;
+    private IQueryRepository $db;
     
     public function __construct($data = null)
     {
@@ -29,27 +29,39 @@ class AppointmentModel
         $this->db = new SQLQueryRepository();
     }
 
-
-
-    public function all()
+    public function all():array
     {
         $appointmentList = [];
-
         foreach($this->db->getAll() as $appointment) 
         {
             array_push($appointmentList, new self ($appointment));
-        } return $appointmentList;
+        } 
+        
+        return $appointmentList;
     }
    
+    public function delete():void
+    {
+        $this->db->delete($this->id);
+    }
 
-
-    public function save()
+    public function save():void
     {
        $this->db->save( $this->name, $this->email, $this->title, $this->message );
     }
-
-    public function update($id, $message) 
+    
+    public function getDataById($id): self
     {
-        $this->db->update($id, $message);
+        return new self($this->db->getDataById($id));
+    }
+
+    public function setMessage($message): void
+    {
+        $this->message = $message;
+    }
+
+    public function update() 
+    {
+        $this->db->update($this->id, $this->name, $this->email, $this->title, $this->message);
     }
 }

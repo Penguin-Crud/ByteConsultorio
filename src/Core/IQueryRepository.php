@@ -7,5 +7,6 @@ interface IQueryRepository
     function getAll();
     function save($name, $email, $title, $message);
     function getDataById($id);
-    function update($id, $message);
+    function update($id, $name, $email, $title, $message);
+    function delete($id);
 }

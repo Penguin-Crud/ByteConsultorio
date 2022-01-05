@@ -38,30 +38,28 @@ class AppointmentController
 
     public function mostrarPopUp ($id)
     {
-      $SQLQueryRepository = new SQLQueryRepository();
-      $dataConsulta = $SQLQueryRepository->getDataById($id);
+      $dataConsulta = (new AppointmentModel())->getDataById($id);
       require_once __DIR__ . '/../views/pages/popUp.php';
     }
 
-    
-
-    public function appointmentDelete ($request)
+    public function appointmentDelete ($id)
     {
-      $appointmentToDelete = new SQLQueryRepository();
-      $appointmentToDelete -> delete ($request['id']);
+      $data = (new AppointmentModel())->getDataById($id);
+      $data->delete();
       $this->redirect('/');
     }
 
     public function editInfo ($id)
     {
-      $SQLQueryRepository = new SQLQueryRepository();
-      $idConsulta = $SQLQueryRepository->getDataById($id);
+      $idConsulta = (new AppointmentModel())->getDataById($id);
       require_once __DIR__ . '/../views/pages/editView.php';
     }
 
     public function update($id, $message) 
     {
-      (new AppointmentModel()) -> update($id, $message);
+      $data = (new AppointmentModel()) -> getDataById($id);
+      $data->setMessage($message);
+      $data->update();
       $this->redirect('/');
     }
 }

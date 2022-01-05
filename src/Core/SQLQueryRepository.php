@@ -11,8 +11,6 @@ class SQLQueryRepository implements IQueryRepository
         $this->connection = (new SQLConnection())->mysql;
     }
 
-
-
     function getAll()
     {
         $query = $this->connection->query("select * FROM {$this->table}");
@@ -30,8 +28,6 @@ class SQLQueryRepository implements IQueryRepository
         return $result;
     }
 
-
-
     function save($name, $email, $title, $message)
     {
         $this->connection->query(
@@ -48,11 +44,11 @@ class SQLQueryRepository implements IQueryRepository
         );
     }
 
-    function update($id, $message)
+    function update($id, $name, $email, $title, $message)
     {
         $this->connection->query(
             "UPDATE `{$this->table}` 
-             SET `problem_query`='{$message}' 
+             SET `name`='{$name}', `email`='{$email}', `title_query`='{$title}', `problem_query`='{$message}'
              WHERE `{$this->table}` . `id` = {$id}"
         );
     } 
