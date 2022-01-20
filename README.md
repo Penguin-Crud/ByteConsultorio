@@ -1,5 +1,6 @@
 # ByteConsultorio
-Se trata de un proyecto en equipo que realizamos en el Bootcamp de <a href="https://factoriaf5.org/">Factoria F5</a>. Trabajamos en una app llamada <a href="https://penguin-crud.github.io/ByteConsultorio/">ByteConsultorio</a>(Este link te redirecciona a nuestra app(No esta habilitado para moviles)) en la cual creamos un base de datos local para guardar citas. Estas citas se tratan de problemas tecnicos en un consultora que se realizan al CTO(Chief Technology Officer) para que este pueda resolver tu problema. En esta base de datos requerimos:
+Se trata de un proyecto en equipo que realizamos en el Bootcamp de <a href="https://factoriaf5.org/">Factoria F5</a>. Trabajamos en una app llamada <a href="https://penguin-crud.github.io/ByteConsultorio/">ByteConsultorio</a>(Este link te redirecciona a nuestra app(No esta habilitado para moviles)) en la cual creamos un base de datos local para guardar citas. 
+>Estas citas se tratan de problemas tecnicos en un consultora que se realizan al CTO(Chief Technology Officer) para que este pueda resolver tu problema. En esta base de datos requerimos:
 
 <img src="public/assets/monkey.gif">
 
